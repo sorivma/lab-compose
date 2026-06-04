@@ -42,8 +42,19 @@ lab-compose-mcp
 ```
 
 The stdio server exposes discovery, validation, dry-run, and generation tools
-for the combined pipeline and both underlying compose formats. Write tools
-require an explicit output root and default to dry-run where applicable.
+for the combined pipeline and both underlying compose formats. It also exposes
+workspace-scoped file authoring, command execution, schemas, and examples so an
+agent can implement a laboratory, preserve execution evidence, author configs,
+read text/DOCX/PDF assignments, and generate the final report. Write tools
+require an explicit workspace or output root and default to dry-run where
+applicable.
+
+Recommended first MCP calls:
+
+1. `get_agent_guide`
+2. `inspect_capabilities`
+3. `list_lab_files`
+4. `get_compose_schema` / `get_compose_example`
 
 ## Working Example
 
