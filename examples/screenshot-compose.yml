@@ -1,0 +1,8 @@
+version: 1
+
+renders:
+  terminal:
+    input: source.log
+    output: build/terminal.png
+    title: Example
+    frame: windows

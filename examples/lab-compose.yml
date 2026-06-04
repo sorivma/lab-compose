@@ -1,0 +1,10 @@
+version: 1
+
+screenshots:
+  project: screenshot-compose.yml
+  names: [terminal]
+
+report:
+  config: otchet-compose.yml
+
+manifest: build/lab-compose.manifest.json

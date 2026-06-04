@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://schemas.lab-compose.dev/pipeline/v1.json",
+  "title": "lab-compose pipeline",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "report"],
+  "properties": {
+    "version": {"const": 1},
+    "screenshots": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["project"],
+      "properties": {
+        "project": {"type": "string", "minLength": 1},
+        "names": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true}
+      }
+    },
+    "report": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["config"],
+      "properties": {"config": {"type": "string", "minLength": 1}}
+    },
+    "manifest": {"type": "string", "minLength": 1}
+  }
+}

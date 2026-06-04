@@ -1,0 +1,15 @@
+version: 1
+
+document:
+  output: build/report.docx
+  toc: false
+
+content:
+  - type: heading
+    text: "Ход работы"
+    level: 1
+    structural: true
+
+  - type: figure
+    caption: "Результат выполнения команды"
+    path: build/terminal.png
